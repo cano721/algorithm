@@ -28,14 +28,11 @@
 # 12 = 5 + 7 입니다.
 # 따라서 [2,5,7,9,12] 를 return 해야 합니다.
 
-def solution(numbers):
-    answer = []
-    for i in range(0,len(numbers)):
-        for j in range(i+1,len(numbers)):
-            num = numbers[i] + numbers[j]
-            if not num in answer:
-                answer.append(num)
-                # 더한 숫자값 리스트에 더하기(중복은 제거)
-                answer.sort()
-#더한 숫자값 리스트를 만들고 전값 후값 비교해서 작은숫자를 앞으로 배치
-    return answer
+# def calc(num1,num2):
+#     print(num1 * int(str(num2)[2:])
+#     print(num1 * int(str(num2)[1:2])
+#     print(num1 * int(str(num2)[0:1])
+
+print(111 * int((str(123)[2:]))
+# print(num1 * int(str(num2)[1:2])
+# print(num1 * int(str(num2)[0:1])
