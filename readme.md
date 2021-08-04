@@ -25,7 +25,7 @@
 ---
 
 * [평범한 배낭G5](https://www.acmicpc.net/problem/12865) 실패
-* 
+* [방법을 출력하지 않는 숫자](https://www.acmicpc.net/problem/13392) 2트실패
 
 
 
@@ -34,3 +34,13 @@
 ---
 
 * [AC G5](https://www.acmicpc.net/problem/5430) 실패
+
+
+
+### DFS&BFS
+
+---
+
+* [적록색약 G5](https://www.acmicpc.net/problem/10026)
+* [빙산 G4](https://www.acmicpc.net/problem/2573)
+
