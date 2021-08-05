@@ -75,7 +75,6 @@ for i in range(n):
 dirX = [0,0,1,-1]
 dirC = [1,-1,0,0]
 
-
 eyesNum = checkEyes()
 nomalNum = checkNomal()
 

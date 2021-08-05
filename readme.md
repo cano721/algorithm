@@ -17,6 +17,7 @@
 * [최단경로G5](https://www.acmicpc.net/problem/1753)
 * [최소비용 구하기G5](https://www.acmicpc.net/problem/1916)
 * [알고스팟G4](https://www.acmicpc.net/problem/1261)
+* [특정한 최단 경로 G4](https://www.acmicpc.net/problem/1504) 실패
 
 
 
@@ -44,3 +45,10 @@
 * [적록색약 G5](https://www.acmicpc.net/problem/10026)
 * [빙산 G4](https://www.acmicpc.net/problem/2573)
 
+
+
+### 이분탐색
+
+---
+
+* [중량제한 G4](https://www.acmicpc.net/problem/1939) 실패
