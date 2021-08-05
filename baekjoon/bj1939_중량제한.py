@@ -1,11 +1,12 @@
 # 문제유형 파악실패
 
 
-from collections import defaultdict, deque
+from collections import defaultdict,deque
 import sys
 
 
 def search():
+    global minC,maxC
     while minC<= maxC:
         mid = (minC+maxC) // 2  
         if bfs(mid):
@@ -18,6 +19,7 @@ def search():
 
 
 def bfs(mid):
+    global start,end
     visited = [0]*(n+1)
     visited[start] = 1
     que = deque()
