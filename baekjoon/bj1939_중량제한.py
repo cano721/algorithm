@@ -10,8 +10,8 @@ def search():
     while minC<= maxC:
         mid = (minC+maxC) // 2  
         if bfs(mid):
-            result = mid
             minC = mid+1
+            result = mid
         else:
             maxC = mid -1
 
