@@ -48,7 +48,7 @@
 
 * [적록색약 G5](https://www.acmicpc.net/problem/10026)
 * [빙산 G4](https://www.acmicpc.net/problem/2573)
-* [이분 그래프G4](https://www.acmicpc.net/problem/1707) 문제 이해 실패..
+* [이분 그래프G4](https://www.acmicpc.net/problem/1707) 문제 이해 실패.. 파악 후 풀이 성공
 
 
 
@@ -57,3 +57,4 @@
 ---
 
 * [중량제한 G4](https://www.acmicpc.net/problem/1939) 실패
+
