@@ -30,7 +30,9 @@
 ---
 
 * [평범한 배낭G5](https://www.acmicpc.net/problem/12865) 실패
-* [방법을 출력하지 않는 숫자](https://www.acmicpc.net/problem/13392) 2트실패
+* [방법을 출력하지 않는 숫자 G2](https://www.acmicpc.net/problem/13392) 2트실패
+* [합분해 G5](https://www.acmicpc.net/problem/2225) 실패
+* [이항계수2 S1](https://www.acmicpc.net/problem/11051)
 
 
 
@@ -57,4 +59,12 @@
 ---
 
 * [중량제한 G4](https://www.acmicpc.net/problem/1939) 실패
+
+
+
+### 우선순위큐
+
+---
+
+* [가운데를 말해요 G2](https://www.acmicpc.net/problem/1655) 실패
 
