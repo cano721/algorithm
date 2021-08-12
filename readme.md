@@ -3,6 +3,7 @@
 ---
 
 * [로봇 청소기G5](https://www.acmicpc.net/problem/14503) 시간 내 실패
+* [테트로미노G5](https://www.acmicpc.net/problem/14500) 실패..
 
 
 
@@ -33,7 +34,9 @@
 * [방법을 출력하지 않는 숫자 G2](https://www.acmicpc.net/problem/13392) 2트실패
 * [합분해 G5](https://www.acmicpc.net/problem/2225) 실패
 * [이항계수2 S1](https://www.acmicpc.net/problem/11051)
-* [쉬운 계단수 S1](https://www.acmicpc.net/problem/10844) 실패..
+* [쉬운 계단수 S1](https://www.acmicpc.net/problem/10844) 2트
+* [공유기설치 s1](https://www.acmicpc.net/problem/2110) 
+* [LCS G5](https://www.acmicpc.net/problem/9251) 실패
 
 
 
@@ -41,7 +44,8 @@
 
 ---
 
-* [AC G5](https://www.acmicpc.net/problem/5430) 실패
+* [AC G5](https://www.acmicpc.net/problem/5430) 2트
+* 
 
 
 
