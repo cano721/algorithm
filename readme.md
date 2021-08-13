@@ -22,7 +22,7 @@
 * [최단경로G5](https://www.acmicpc.net/problem/1753)
 * [최소비용 구하기G5](https://www.acmicpc.net/problem/1916)
 * [알고스팟G4](https://www.acmicpc.net/problem/1261)
-* [특정한 최단 경로 G4](https://www.acmicpc.net/problem/1504) 실패
+* [특정한 최단 경로 G4](https://www.acmicpc.net/problem/1504) 2트
 
 
 
@@ -30,13 +30,14 @@
 
 ---
 
-* [평범한 배낭G5](https://www.acmicpc.net/problem/12865) 실패
+* [평범한 배낭G5](https://www.acmicpc.net/problem/12865) 2트
 * [방법을 출력하지 않는 숫자 G2](https://www.acmicpc.net/problem/13392) 2트실패
-* [합분해 G5](https://www.acmicpc.net/problem/2225) 실패
+* [합분해 G5](https://www.acmicpc.net/problem/2225) 2트
 * [이항계수2 S1](https://www.acmicpc.net/problem/11051)
 * [쉬운 계단수 S1](https://www.acmicpc.net/problem/10844) 2트
 * [공유기설치 s1](https://www.acmicpc.net/problem/2110) 
 * [LCS G5](https://www.acmicpc.net/problem/9251) 실패
+* [정수 삼각형 s1](https://www.acmicpc.net/problem/1932)
 
 
 
@@ -65,6 +66,7 @@
 
 * [중량제한 G4](https://www.acmicpc.net/problem/1939) 실패
 * [K번째 수](https://www.acmicpc.net/problem/1300) 실패
+* [히오스 프로게이머 S1](https://www.acmicpc.net/problem/16564)
 
 
 

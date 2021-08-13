@@ -27,7 +27,7 @@ def binarySearch(start,end,level,n,k):
             answer = mid
         #경험치 부족이면 목표레벨 감소
         else:
-            end = mid -1
+            end = mid -1    
 
 
 # 캐릭터 개수 n 레벨총합 k
