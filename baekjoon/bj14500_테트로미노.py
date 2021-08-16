@@ -33,28 +33,13 @@ for i in range(n):
             visited = [[0]*m for _ in range(n)]
             visited[i][j] = 1
             #큐에 현재좌표,현재까지 합,사용한블럭수 넣기
-            que.append([[i,j],maps[i][j],1,visited])
 
-            while que:
-                coordinates,curSum,blockNum,visited = que.popleft()
-                if blockNum == 4:
-                    answer = max(answer,curSum)
-                else:
-                    curMax = 0
-                    xyList = []
-                    #좌표이동
-                    for i in range(4):
-                        x = coordinates[0] + dirX[i]
-                        y = coordinates[1] + dirX[j]
-                        #이동한좌표가 방문하지않았고 종이내라면
-                        if 0 <= x < n and 0 <= y < m and visited[x][y] == 0:
-                            if curMax < maps[x][y]:
-                                curMax = maps[x][y]
-                                xyList = [[x,y]]
-                            elif curMax == maps[x][y]:
-                                xyList.append([x,y])
-                    for nextCoordinates in xyList:
-                        nextX = nextCoordinates[0]
-                        nextY = nextCoordinates[1]
-                        que.append([[nextX,nextY],curSum+maps[nextX][nextY],blockNum+1])
+def dfs(sumNum,cnt):
+    if cnt == 4:
+        if sumNum > answer:
+            answer = sumNum
+    
+    
+    
+
 

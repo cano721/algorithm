@@ -38,6 +38,7 @@
 * [공유기설치 s1](https://www.acmicpc.net/problem/2110) 
 * [LCS G5](https://www.acmicpc.net/problem/9251) 실패
 * [정수 삼각형 s1](https://www.acmicpc.net/problem/1932)
+* [1,2,3 더하기 S3](https://www.acmicpc.net/problem/9095)
 
 
 
@@ -46,7 +47,8 @@
 ---
 
 * [AC G5](https://www.acmicpc.net/problem/5430) 2트
-* 
+* [Contact G5](https://www.acmicpc.net/problem/1013) 그냥 정규표현식 문제...
+* [단어뒤집기 2 S3](https://www.acmicpc.net/problem/17413)
 
 
 
