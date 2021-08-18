@@ -5,9 +5,6 @@ import re
 # 테스트케이스 t
 t = int(sys.stdin.readline().rstrip())
 
-# 조합
-wave = ["100","01","1001","1000"]
-
 for _ in range(t):
     string = sys.stdin.readline().rstrip()
 

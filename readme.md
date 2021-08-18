@@ -3,7 +3,7 @@
 ---
 
 * [로봇 청소기G5](https://www.acmicpc.net/problem/14503) 시간 내 실패
-* [테트로미노G5](https://www.acmicpc.net/problem/14500) 실패..
+* [테트로미노G5](https://www.acmicpc.net/problem/14500) 2트
 
 
 
@@ -39,6 +39,7 @@
 * [LCS G5](https://www.acmicpc.net/problem/9251) 실패
 * [정수 삼각형 s1](https://www.acmicpc.net/problem/1932)
 * [1,2,3 더하기 S3](https://www.acmicpc.net/problem/9095)
+* [이친수 s3](https://www.acmicpc.net/problem/2193)
 
 
 
