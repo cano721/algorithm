@@ -23,6 +23,7 @@
 * [최소비용 구하기G5](https://www.acmicpc.net/problem/1916)
 * [알고스팟G4](https://www.acmicpc.net/problem/1261)
 * [특정한 최단 경로 G4](https://www.acmicpc.net/problem/1504) 2트
+* [특정 거리의 도시 찾기 S2](https://www.acmicpc.net/problem/18352)
 
 
 
@@ -40,6 +41,7 @@
 * [정수 삼각형 s1](https://www.acmicpc.net/problem/1932)
 * [1,2,3 더하기 S3](https://www.acmicpc.net/problem/9095)
 * [이친수 s3](https://www.acmicpc.net/problem/2193)
+* [2*n 타일링2](https://www.acmicpc.net/problem/11727)
 
 
 
@@ -70,6 +72,7 @@
 * [중량제한 G4](https://www.acmicpc.net/problem/1939) 실패
 * [K번째 수](https://www.acmicpc.net/problem/1300) 실패
 * [히오스 프로게이머 S1](https://www.acmicpc.net/problem/16564)
+* [랜선 자르기 s3](https://www.acmicpc.net/problem/1654)
 
 
 
