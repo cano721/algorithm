@@ -18,10 +18,8 @@ alist = list(map(int,sys.stdin.readline().split()))
 dp = [0]*n
 
 #맨초기값 저장
-# for i in range(n):
-#     dp[i] = alist[i]
-
-dp[0] = alist[0]
+for i in range(n):
+    dp[i] = alist[i]
 
 for i in range(n):
     for j in range(i):
