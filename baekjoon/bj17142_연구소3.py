@@ -63,5 +63,3 @@ for value in startV:
         answer = result
 
 print(answer)
-
-
