@@ -6,6 +6,11 @@
 * [테트로미노G5](https://www.acmicpc.net/problem/14500) 2트
 * [괄호의값S2](https://www.acmicpc.net/problem/2504)
 * [블랙 프라이데이 S1](https://www.acmicpc.net/problem/18114) 실패
+* [카카오2021 블라인드: 신규아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410)
+* [카카오2021 블라인드: 메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411) 실패
+* [수 이어쓰기1 S3](https://www.acmicpc.net/problem/1748)
+
+
 
 
 

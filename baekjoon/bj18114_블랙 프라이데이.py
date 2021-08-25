@@ -32,15 +32,10 @@ n,c = map(int,sys.stdin.readline().split())
 items = list(map(int,sys.stdin.readline().split()))
 items.sort(reverse=True)
 
-#시작 인덱스랑 최대 인덱스
-start = 0
-end = len(items)-1
-
 #무게별 아이템이 있는지 체크
-checkList = [0]*(c+1)
+checkList = [0]*(10**8+1)
 for i in items:
     checkList[i] = 1
-
 
 print(check())
 
