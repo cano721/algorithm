@@ -14,6 +14,7 @@ def solution(new_id):
         if word.isdecimal() or word.islower() or word == "-" or word == "_" or word == ".":
             answer2 += word
     
+    
     #3단계
     answer3 = ''
     count = 0
