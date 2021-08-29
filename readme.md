@@ -9,6 +9,7 @@
 * [카카오2021 블라인드: 신규아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410)
 * [카카오2021 블라인드: 메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411) 실패
 * [수 이어쓰기1 S3](https://www.acmicpc.net/problem/1748)
+* [치킨 배달 G5](https://www.acmicpc.net/problem/15686)
 
 
 

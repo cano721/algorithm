@@ -6,9 +6,8 @@ s = sys.stdin.readline().rstrip()
 
 nstring = "I" +"OI"*n
 answer = 0
-print(s.count(nstring))
-# for i in range(len(s)):
-#     if i + len(nstring) <= len(s):
-#         if s[i:i + len(nstring)] == nstring:
-#             answer +=1
-# print(answer)
+for i in range(len(s)):
+    if i + len(nstring) <= len(s):
+        if s[i:i + len(nstring)] == nstring:
+            answer +=1
+print(answer)
