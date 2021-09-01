@@ -10,7 +10,7 @@
 * [카카오2021 블라인드: 메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411) 실패
 * [수 이어쓰기1 S3](https://www.acmicpc.net/problem/1748)
 * [치킨 배달 G5](https://www.acmicpc.net/problem/15686)
-* [아기상어 G4](https://www.acmicpc.net/problem/16236) 실패 다시 풀기
+* [아기상어 G4](https://www.acmicpc.net/problem/16236) 2트
 
 
 
@@ -35,6 +35,7 @@
 * [알고스팟G4](https://www.acmicpc.net/problem/1261)
 * [특정한 최단 경로 G4](https://www.acmicpc.net/problem/1504) 2트
 * [특정 거리의 도시 찾기 S2](https://www.acmicpc.net/problem/18352)
+* [파티 G3](https://www.acmicpc.net/problem/1238)
 
 
 
@@ -78,6 +79,7 @@
 * [이분 그래프G4](https://www.acmicpc.net/problem/1707) 문제 이해 실패.. 파악 후 풀이 성공
 * [잃어버린 괄호 s2](https://www.acmicpc.net/problem/1541)
 * [욕심쟁이 판다 G3](https://www.acmicpc.net/problem/1937) DP+DFS 실패..
+* [문자열 집합 S3](https://www.acmicpc.net/problem/14425)
 
 
 
