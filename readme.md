@@ -11,6 +11,7 @@
 * [수 이어쓰기1 S3](https://www.acmicpc.net/problem/1748)
 * [치킨 배달 G5](https://www.acmicpc.net/problem/15686)
 * [아기상어 G4](https://www.acmicpc.net/problem/16236) 2트
+* [프린터 큐 S3](https://www.acmicpc.net/problem/1966)
 
 
 
