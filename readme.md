@@ -41,18 +41,38 @@
 ---
 
 * [평범한 배낭G5](https://www.acmicpc.net/problem/12865) 2트
+
 * [방법을 출력하지 않는 숫자 G2](https://www.acmicpc.net/problem/13392) 2트실패
+
 * [합분해 G5](https://www.acmicpc.net/problem/2225) 2트
+
 * [이항계수2 S1](https://www.acmicpc.net/problem/11051)
+
 * [쉬운 계단수 S1](https://www.acmicpc.net/problem/10844) 2트
+
 * [공유기설치 s1](https://www.acmicpc.net/problem/2110) 
+
 * [LCS G5](https://www.acmicpc.net/problem/9251) 실패
+
 * [정수 삼각형 s1](https://www.acmicpc.net/problem/1932)
+
 * [1,2,3 더하기 S3](https://www.acmicpc.net/problem/9095)
+
 * [이친수 s3](https://www.acmicpc.net/problem/2193)
+
 * [가장 큰 증가 부분 수열 S2](https://www.acmicpc.net/problem/11055) 실패
+
 * [2*n 타일링2](https://www.acmicpc.net/problem/11727)
+
 * [스티커 S2](https://www.acmicpc.net/problem/9465)
+
+* [동전1 S1](https://www.acmicpc.net/problem/2293) 실패
+
+* [피보나치 함수 S3](https://www.acmicpc.net/problem/1003)
+
+* [가장 긴 증가하는 부분 수열 S2](https://www.acmicpc.net/problem/11053)
+
+  
 
 
 
