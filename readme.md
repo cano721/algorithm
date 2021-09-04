@@ -12,6 +12,8 @@
 * [치킨 배달 G5](https://www.acmicpc.net/problem/15686)
 * [아기상어 G4](https://www.acmicpc.net/problem/16236) 2트
 * [프린터 큐 S3](https://www.acmicpc.net/problem/1966)
+* [결혼식 S1](https://www.acmicpc.net/problem/5567)
+* [한 줄로 서기 S2](https://www.acmicpc.net/problem/1138)
 
 
 
