@@ -16,7 +16,7 @@ for i in range(n):
         if number == nlist[i] and result[j]==0:
             result[j] = i+1
             break
-        elif(result[j] == 0):
+        elif result[j] == 0:
             number += 1
 for i in result:
     print(i,end=" ")
