@@ -17,6 +17,7 @@
 * [셀프 넘버 S5](https://www.acmicpc.net/problem/4673)
 * [그룹 단어 체커 S5](https://www.acmicpc.net/status?user_id=cano721&problem_id=1316&from_mine=1)
 * [크로아티아 알파벳 S5](https://www.acmicpc.net/problem/2941)
+* [뱀 G5](https://www.acmicpc.net/problem/3190)
 
 
 
@@ -78,6 +79,8 @@
 * [피보나치 함수 S3](https://www.acmicpc.net/problem/1003)
 
 * [가장 긴 증가하는 부분 수열 S2](https://www.acmicpc.net/problem/11053)
+
+* [1로 만들기 S3](https://www.acmicpc.net/problem/1463)
 
   
 
