@@ -82,6 +82,8 @@
 
 * [1로 만들기 S3](https://www.acmicpc.net/problem/1463)
 
+* [계단 오르기 S3](https://www.acmicpc.net/problem/2579)
+
   
 
 
