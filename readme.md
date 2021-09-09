@@ -84,6 +84,8 @@
 
 * [계단 오르기 S3](https://www.acmicpc.net/problem/2579)
 
+* [연속합 S2](https://www.acmicpc.net/problem/1912)
+
   
 
 
