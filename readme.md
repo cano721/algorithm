@@ -140,5 +140,12 @@
 ---
 
 * [누적합 구하기4 S4](https://www.acmicpc.net/problem/11659) 실패
+
 * [구간합 구하기5 S1](https://www.acmicpc.net/problem/11660) 실패
+
+* [수열 S3](https://www.acmicpc.net/problem/2559) 
+
+* [소가 길을 건너간 이유 5](https://www.acmicpc.net/problem/14465) 
+
+  
 
