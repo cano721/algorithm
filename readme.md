@@ -111,6 +111,7 @@
 * [잃어버린 괄호 s2](https://www.acmicpc.net/problem/1541)
 * [욕심쟁이 판다 G3](https://www.acmicpc.net/problem/1937) DP+DFS 실패..
 * [문자열 집합 S3](https://www.acmicpc.net/problem/14425)
+* [치즈 G5](https://www.acmicpc.net/problem/2636) 문제를 잘 읽자! 성공은 함
 
 
 

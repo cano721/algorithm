@@ -22,7 +22,9 @@ for i in range(1,len(tl)):
 answer = sys.maxsize
 
 for i in range(len(tl)):
+    # 이후로 k개의 신호등이 있을때
     if i+k < len(tl):
+        #고장난 개수 파악하여 최소면 정답으로 변경
         answer = min(answer,error_tl_num[i+k]- error_tl_num[i])
 
 print(answer)
