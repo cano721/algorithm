@@ -98,6 +98,7 @@
 * [Contact G5](https://www.acmicpc.net/problem/1013) 그냥 정규표현식 문제...
 * [단어뒤집기 2 S3](https://www.acmicpc.net/problem/17413)
 * [IOIOI S2](https://www.acmicpc.net/problem/5525) 50점.. 이유 모르겠음 ㄷㄷ;
+* [괄호 S4](https://www.acmicpc.net/problem/9012)
 
 
 
