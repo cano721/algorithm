@@ -18,6 +18,7 @@
 * [그룹 단어 체커 S5](https://www.acmicpc.net/status?user_id=cano721&problem_id=1316&from_mine=1)
 * [크로아티아 알파벳 S5](https://www.acmicpc.net/problem/2941)
 * [뱀 G5](https://www.acmicpc.net/problem/3190)
+* [집합 S5](https://www.acmicpc.net/problem/11723) 실패.. 추후 비트마스킹으로 다시 풀어볼것
 
 
 
