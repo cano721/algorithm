@@ -2,27 +2,25 @@ import sys
 
 m = int(sys.stdin.readline())
 
-setList = dict()
+setList = set()
 for _ in range(m):
     command = list(map(str,sys.stdin.readline().split()))
 
     if command[0] == "add":
-        setList[command[1]] = 1
+        setList.add(command[1])
     elif command[0] == "remove":
-        if setList.get(command[1]):
-            del setList[command[1]]
+        setList.discard(command[1])
     elif command[0] == "check":
-        if setList.get(command[1]):
+        if command[1] in setList:
             print(1)
         else:
             print(0)
     elif command[0] == "toggle":
-        if setList.get(command[1]):
-            del setList[command[1]]
+        if command[1] in setList:
+            setList.discard(command[1])
         else:
-            setList[command[1]] = 1
+            setList.add(command[1])
     elif command[0] == "all":
-        for i in range(1,21):
-            setList[i] = 1
+        setList = set( i for i in range(1,21))
     elif command[0] == "empty":
-        setList = dict()
+        setList.clear()
