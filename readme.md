@@ -21,6 +21,7 @@
 * [집합 S5](https://www.acmicpc.net/problem/11723) 실패.. 추후 비트마스킹으로 다시 풀어볼것
 * [통계학 S4](https://www.acmicpc.net/problem/2108) 딕셔너리 람다 정렬과 카운터함수 공부하기!
 * [방번호 S5](https://www.acmicpc.net/problem/1475)
+* [에라토스테네스의 체 S4](https://www.acmicpc.net/problem/2960)
 
 
 
