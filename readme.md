@@ -22,6 +22,7 @@
 * [통계학 S4](https://www.acmicpc.net/problem/2108) 딕셔너리 람다 정렬과 카운터함수 공부하기!
 * [방번호 S5](https://www.acmicpc.net/problem/1475)
 * [에라토스테네스의 체 S4](https://www.acmicpc.net/problem/2960)
+* [부등호 S2](https://www.acmicpc.net/problem/2529)
 
 
 
@@ -103,6 +104,7 @@
 * [단어뒤집기 2 S3](https://www.acmicpc.net/problem/17413)
 * [IOIOI S2](https://www.acmicpc.net/problem/5525) 50점.. 이유 모르겠음 ㄷㄷ;
 * [괄호 S4](https://www.acmicpc.net/problem/9012)
+* [팰린드롬 만들기 S1](https://www.acmicpc.net/problem/1254) 실패..
 
 
 
