@@ -23,6 +23,7 @@
 * [방번호 S5](https://www.acmicpc.net/problem/1475)
 * [에라토스테네스의 체 S4](https://www.acmicpc.net/problem/2960)
 * [부등호 S2](https://www.acmicpc.net/problem/2529)
+* [주사위 굴리기 G4](https://www.acmicpc.net/problem/14499)
 
 
 
@@ -119,6 +120,7 @@
 * [욕심쟁이 판다 G3](https://www.acmicpc.net/problem/1937) DP+DFS 실패..
 * [문자열 집합 S3](https://www.acmicpc.net/problem/14425)
 * [치즈 G5](https://www.acmicpc.net/problem/2636) 문제를 잘 읽자! 성공은 함
+* [트리 G5](https://www.acmicpc.net/problem/1068)
 
 
 
