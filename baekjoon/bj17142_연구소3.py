@@ -1,65 +1,108 @@
 #문제풀이
 # 시간제한 10^8/4
-# 바이러스들의 좌표를 리스트에 담아두고 그중에서 m개를 뽑는 리스트를 만든다..
-# 50*50 맵에서 최대 나올 수 있는 바이러스는 2500개.. 에서 m의 최대는 10이므로 2500^10 시간복잡도 문제됨..
-# 다른방법이 안떠오름 응용해서 풀겠음
-# n과 m 방식으로 바이러스 리스트에서 m개를 고르는 재귀함수를 만들고 m개 골라졌을 시 deque를 돌림
-# visited에 바이러스가 전염되는 시간을 저장하여 최종 시간 출력 예정
-
-
-#추가
-#파이썬 combination 함수 사용 (n과 m 대신)
-
+# 맵에서 바이러스 고르기
+# 고른 바이러스로 전파
+# 최종 전파시 걸린 시간(마지막 전파가 기존 바이러스면 제외)
+# n과 m 백트래킹으로 고르니 시간초과
+# 콤비네이션으로 해결..
+import sys,copy
 from collections import deque
 from itertools import combinations
-from copy import deepcopy
-import sys
 
 n,m = map(int,sys.stdin.readline().split())
+# 맵 생성
+maps = []
+for i in range(n):
+    maps.append(list(map(int,sys.stdin.readline().split())))
 
-graph = [0]*n
+# 바이러스 리스트
 v = []
-dirs = [(0,1),(0,-1),(1,0),(-1,0)]
-for row in range(n):
-    graph[row] = list(map(int,sys.stdin.readline().split()))
+for i in range(n):
+    for j in range(n):
+        if maps[i][j] == 2:
+            v.append([i,j,0])
 
-for columns in range(n):
-    for rows in range(n):
-        if graph[columns][rows] == 2:
-            v.append([columns,rows])
 
-startV = list(combinations(v,m))
-answer = -1
+# 방향탐색
+dirX = [0,0,1,-1]
+dirY = [1,-1,0,0]
 
-def bfs(start,graph):
-    visited = [[-1]*n for _ in range(n)]
-    graph = deepcopy(graph) # 내용 복사한 새로운 그래프 생성
-    queue = deque()
+# 정답
+answer = sys.maxsize
 
-    #extend는 배열을 넣을때 사용(그냥 쓰면 우측으로 붙고 left쓰면 왼쪽으로)
-    queue.append(start)
-
-    while queue:
-        cur = queue.popleft()
-        visited[cur[0]][cur[1]] = 0
-        for i in range(4):
-            y = cur[0] + dirs[i][0]
-            x = cur[1] + dirs[i][1]
-            if 0<= x < n and 0<= y < n and visited[y][x] == -1 and graph[y][x] == 0:
-                visited[y][x] = visited[cur[0]][cur[1]] +1
-                graph[y][x] = 2
-                queue.append([y,x])
-        
-    for a in range(n):
-        for b in range(n):
-            if graph[a][b] == 0:
-                return -1
-            else:
-                return visited[y][x]
+# 다 채웠는지 확인 함수
+def check(graph):
+    for i in range(n):
+        for j in range(n):
+            if graph[i][j] == 0:
+                return False
     
-for value in startV:
-    result = bfs(value,graph)
-    if result > answer:
+    return True
+
+# 바이러스 선택함수
+def choiceV(stage,newi):
+    global answer
+    if stage == m:
+        answer = min(answer,bfs())
+        return
+
+    for i in range(newi,n):
+        for j in range(n):
+            if maps[i][j] == 2:
+                maps[i][j] = 3
+                choiceV(stage+1,i)
+                maps[i][j] = 2
+
+# 바이러스 채우기 함수
+def bfs(choice,maps):
+    que = deque()
+    maps2 = copy.deepcopy(maps)
+
+    que.extend(choice)
+
+    # 다돌았을때 걸린 시간
+    answerNum = 0
+
+    #방문여부
+    visited = [[0]*n for _ in range(n)]
+
+    # 돌기
+    while que:
+        a,b,time = que.popleft()
+        visited[a][b] = 1
+        for idx in range(4):
+            x = dirX[idx] + a
+            y = dirY[idx] + b
+
+            # 좌표내에있고 방문하지 않은 곳이면
+            if 0 <= x < n and 0 <= y < n and visited[x][y] == 0 and maps2[x][y] != 1:
+                visited[x][y] = 1
+                # 방문하지않은곳이 빈칸이면
+                # 마지막에 방문한곳이 빈칸이 아닐때를 가려내기위해
+                # 이고셍 answerNum 변화를 일으킴
+                if maps2[x][y] == 0:
+                    maps2[x][y] = 3
+                    answerNum = time+1
+                que.append([x,y,time+1])
+                
+    
+    # 다돌았는지 및 시간 체크
+    flag = check(maps2)
+
+    if flag:
+        return answerNum
+    else:
+        return sys.maxsize
+
+
+choiceV = list(combinations(v,m))
+
+for choice in choiceV:
+    result = bfs(choice,maps)
+    if answer > result:
         answer = result
 
-print(answer)
+if answer == sys.maxsize:
+    print(-1)
+else:
+    print(answer)

@@ -24,6 +24,7 @@
 * [에라토스테네스의 체 S4](https://www.acmicpc.net/problem/2960)
 * [부등호 S2](https://www.acmicpc.net/problem/2529)
 * [주사위 굴리기 G4](https://www.acmicpc.net/problem/14499)
+* [연구소3 G4](https://www.acmicpc.net/problem/17142) 다시 풀것!
 
 
 
