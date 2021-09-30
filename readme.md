@@ -25,6 +25,7 @@
 * [부등호 S2](https://www.acmicpc.net/problem/2529)
 * [주사위 굴리기 G4](https://www.acmicpc.net/problem/14499)
 * [연구소3 G4](https://www.acmicpc.net/problem/17142) 다시 풀것!
+* [숫자 정사각형 S3](https://www.acmicpc.net/problem/1051)
 
 
 
