@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+import java.util.Arrays;
+
+
+public class BJ10818_최소_최대 {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++){
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        Arrays.sort(arr);
+        System.out.println(arr[0]+ " " + arr[n-1]);
+    }
+}
