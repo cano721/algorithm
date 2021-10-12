@@ -10,5 +10,8 @@ public class BJ2438_별찍기1 {
         for(int i = 1; i <= n; i++){
             bw.write("*".repeat(i) + "\n");
         }
+
+        bw.flush();
+        bw.close();
     }
 }
