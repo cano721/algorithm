@@ -19,4 +19,3 @@ public class BJ2292_벌집 {
         }
     }
 }
-
