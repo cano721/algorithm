@@ -1,9 +1,12 @@
 public class Test {
     public static void main(String[] args) {
-        System.out.println("|\\_/|");
-        System.out.println("|q p|   /}");
-        System.out.println("( 0 )\"\"\"\\");
-        System.out.println("|\"^\"`    |");
-        System.out.println("||_/=\\\\__|");
+        
+        
+    }
+
+    public static int fact(int num){
+        if(num == 0) return num;
+
+        return num*fact(num-1);
     }
 }
