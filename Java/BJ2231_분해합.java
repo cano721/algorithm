@@ -7,7 +7,7 @@ public class BJ2231_분해합 {
 
         
         int n = Integer.parseInt(br.readLine());
-        
+        Boolean check = true;
         for(int i = 0; i <= n; i++){
             int num = i;
             int checkNum = num;
@@ -17,9 +17,11 @@ public class BJ2231_분해합 {
             }
             if(checkNum == n){
                 System.out.println(i);
+                check = false;
                 break;
             }
         }
+        if(check) System.out.println(0);
 
     }
 }
