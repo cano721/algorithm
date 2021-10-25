@@ -9,8 +9,10 @@ public class BJ7568_덩치 {
         int pnum = Integer.parseInt(br.readLine());
         StringTokenizer st;
 
+        //2차원 배열 생성
         int[][] arr = new int[pnum][2];
 
+        //배열에 담기
         for(int i = 0; i < pnum; i++){
             
             st = new StringTokenizer(br.readLine()," ");
@@ -29,7 +31,8 @@ public class BJ7568_덩치 {
                 if(i == j){
                     continue;
                 }
-
+                
+                //키와 무게가 둘 다 큰 사람이 있을 경우 등수 증가
                 if(arr[i][0] < arr[j][0]){
                     if(arr[i][1] < arr[j][1]){
                         answer++;
