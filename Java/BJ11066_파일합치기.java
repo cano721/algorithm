@@ -1,12 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// 40 30 30 50    40 30 30 20
-
-// 70 100 150      70 100 120
-// 70 80  150      70  50 120
-// 60 100 150      60  100 120
-// 60 110 150      60  80  120
+// 실패
 
 public class BJ11066_파일합치기 {
     public static void main(String[] args) throws IOException{
@@ -17,43 +12,33 @@ public class BJ11066_파일합치기 {
 
         for(int i = 0; i < t; i++){
             int k = Integer.parseInt(br.readLine());
-            int[] arr = new int[k];
-            int[] dp = new int[k];
+            int[] arr = new int[k+1];
+            int[] sum = new int[k+1];
+            int[][] dp = new int[k+1][k+1];
             StringTokenizer st = new StringTokenizer(br.readLine());
-            PriorityQueue<Integer> pq = new PriorityQueue<>((o1,o2) -> o1-o2);
-            for(int j = 0; j < k; j++){
+            for(int j = 1; j <= k; j++){
                 int num = Integer.parseInt(st.nextToken());
                 arr[j] = num;
-                pq.offer(num);
+                sum[j] = sum[j-1]+num;
             }
 
-            int sum = 0;
-            while(pq.size() > 1){
-                int num1 = pq.poll();
-                int num2 = pq.poll();
-
-                int num3 = num1+num2;
-                sum += num3;
-                pq.offer(num3);
-            }
-            int lastNum = pq.poll();
-            bw.write(sum + "\n");
-
-            // dp[0] = arr[0];
-            // dp[1] = arr[0]+ arr[1];
-
-            // int sum = 0;
-            // for(int a = 2; a < k; a++){
-            //     dp[a] = Math.min(arr[a]+arr[a-1] + dp[a-2],dp[a-1] +arr[a]);
-            // }
-            // for(int v : dp){
-            //     sum+= v;
-            // }
-
-            // bw.write(sum + "\n");
             
+            // 몇장 묶을건지
+            for(int end = 1; end <= k; end++){
+                // 시작지점()
+                for(int from= 1; from + end <= k; from++){
+                    // 최대 갈 수 있는 지점
+                    int to = from +end;
+                    // 맥스값으로 초기설정
+                    dp[from][to] = Integer.MAX_VALUE;
+                    // 나눠서 더해보기(1~n 일때 1~3 4~n 이런식으로 나누기)
+                    for(int divide = from; divide < to; divide++){
+                        dp[from][to] = Math.min(dp[from][to],dp[from][divide] + dp[divide+1][to] + sum[to] - sum[from-1]);
+                    }
+                }
+            }
+            bw.write(dp[1][k] +"\n");
         }
-
         bw.flush();
         bw.close();
     }
