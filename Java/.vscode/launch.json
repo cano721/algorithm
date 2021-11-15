@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ2580_스도쿠",
+            "request": "launch",
+            "mainClass": "BJ2580_스도쿠",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ10025_게으른백곰",
+            "request": "launch",
+            "mainClass": "BJ10025_게으른백곰",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2003_수들의합2",
+            "request": "launch",
+            "mainClass": "BJ2003_수들의합2",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11066_파일합치기2",
+            "request": "launch",
+            "mainClass": "BJ11066_파일합치기2",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ9663_N_Queen",
             "request": "launch",
             "mainClass": "BJ9663_N_Queen",
