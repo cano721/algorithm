@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ9184_신나는함수실행",
+            "request": "launch",
+            "mainClass": "BJ9184_신나는함수실행",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1003_피보나치함수",
+            "request": "launch",
+            "mainClass": "BJ1003_피보나치함수",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ2580_스도쿠",
             "request": "launch",
             "mainClass": "BJ2580_스도쿠",
