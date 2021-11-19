@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ1932_정수삼각형",
+            "request": "launch",
+            "mainClass": "BJ1932_정수삼각형",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1149_RGB거리",
+            "request": "launch",
+            "mainClass": "BJ1149_RGB거리",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ9461_파도반수열",
+            "request": "launch",
+            "mainClass": "BJ9461_파도반수열",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1904_01타일",
+            "request": "launch",
+            "mainClass": "BJ1904_01타일",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ9184_신나는함수실행",
             "request": "launch",
             "mainClass": "BJ9184_신나는함수실행",
