@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ2579_계단오르기",
+            "request": "launch",
+            "mainClass": "BJ2579_계단오르기",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ1932_정수삼각형",
             "request": "launch",
             "mainClass": "BJ1932_정수삼각형",
