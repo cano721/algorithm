@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ10844_쉬운계단수",
+            "request": "launch",
+            "mainClass": "BJ10844_쉬운계단수",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1463_1로만들기",
+            "request": "launch",
+            "mainClass": "BJ1463_1로만들기",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ12865_평범한배낭",
+            "request": "launch",
+            "mainClass": "BJ12865_평범한배낭",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ2579_계단오르기",
             "request": "launch",
             "mainClass": "BJ2579_계단오르기",
