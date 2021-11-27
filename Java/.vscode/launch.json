@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ11053_가장긴증가하는부분수열",
+            "request": "launch",
+            "mainClass": "BJ11053_가장긴증가하는부분수열",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ10844_쉬운계단수",
             "request": "launch",
             "mainClass": "BJ10844_쉬운계단수",

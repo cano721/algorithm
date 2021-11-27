@@ -31,7 +31,6 @@ public class BJ10844_쉬운계단수 {
 
         int n = Integer.parseInt(br.readLine());
         // 초기 dp 채우기
-        Arrays.fill(dp[0], 0l);
         Arrays.fill(dp[1],1l);
         dp[1][0] = 0l;
         // for(int i = 0; i < 10; i++){
@@ -49,7 +48,8 @@ public class BJ10844_쉬운계단수 {
 
     //탑다운방식
     public static long topdown(int n,int m){
-        if(n == 0 || n == 1){
+        if(
+         n == 1){
             return dp[n][m];
         }
         if(dp[n][m] == null){
@@ -61,7 +61,7 @@ public class BJ10844_쉬운계단수 {
                 dp[n][m] = topdown(n-1,m-1) + topdown(n-1,m+1);
             }
         }
-        return dp[n][m];
+        return dp[n][m]%mod;
     }
 
     // 바텀업방식
@@ -69,11 +69,11 @@ public class BJ10844_쉬운계단수 {
         for(int i = 2; i <= n; i++){
             for(int j = 0; j < 10; j++){
                 if(j == 0){
-                    dp[i][0] = dp[i-1][1];
+                    dp[i][0] = dp[i-1][1] % mod;
                 }else if(j == 9){
-                    dp[i][j] = dp[i-1][8];
+                    dp[i][j] = dp[i-1][8] % mod;
                 }else{
-                    dp[i][j] = dp[i-1][j-1] + dp[i-1][j+1];
+                    dp[i][j] = (dp[i-1][j-1] + dp[i-1][j+1])%mod;
                 }
             }
         }
