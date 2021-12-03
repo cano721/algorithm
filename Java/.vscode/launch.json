@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ2174_로봇시뮬레이션",
+            "request": "launch",
+            "mainClass": "BJ2174_로봇시뮬레이션",
+            "projectName": "Java_4f3d846c"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ11053_가장긴증가하는부분수열",
             "request": "launch",
             "mainClass": "BJ11053_가장긴증가하는부분수열",
