@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ10816_숫자카드2",
+            "request": "launch",
+            "mainClass": "BJ10816_숫자카드2",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2609_최대공약수와최소공배수",
+            "request": "launch",
+            "mainClass": "BJ2609_최대공약수와최소공배수",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2164_카드2",
+            "request": "launch",
+            "mainClass": "BJ2164_카드2",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1259_팰린드롬수",
+            "request": "launch",
+            "mainClass": "BJ1259_팰린드롬수",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2475_검증수",
+            "request": "launch",
+            "mainClass": "BJ2475_검증수",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2920_음계",
+            "request": "launch",
+            "mainClass": "BJ2920_음계",
+            "projectName": "Java_8aac2429"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ11053_가장긴증가하는부분수열",
             "request": "launch",
             "mainClass": "BJ11053_가장긴증가하는부분수열",
