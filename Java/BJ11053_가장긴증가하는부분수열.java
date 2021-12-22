@@ -28,7 +28,6 @@ public class BJ11053_가장긴증가하는부분수열 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        max = 1;
         bottomUp();
         bw.write(max + "\n");
         bw.flush();
