@@ -52,7 +52,6 @@ public class BJ2252_줄세우기 {
 
         while(!q.isEmpty()){
             int cur = q.poll();
-            
             bw.write(cur + " ");
             for(int v: graph[cur]){
                 degree[v]--;
