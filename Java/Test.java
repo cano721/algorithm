@@ -1,103 +1,79 @@
 import java.util.*;
+import java.io.*;
 
 public class Test {
 
-    public static int a,b;
-    public static int[] dirX = {0,0,1,-1};
-    public static int[] dirY = {1,-1,0,0};
-    public static int[][] grid;
-    public static int size,cnt;
-    public static Boolean boolMarum;
-
-    public static void main(String[] args) {
-        // grid = new int[][] {{2,1,1,3,5,1},{1,1,3,3,5,5},{8,3,3,3,1,5},{3,3,3,4,4,4},{3,3,4,4,4,4},{1,4,4,4,4,4}};
-        grid = new int[][] {{10,20,30},{40,50,60},{70,80,90}};
-        solution(grid);
+    static int atoi(String str) {
+        return Integer.parseInt(str);
     }
-    public static void solution(int[][] grid) {
-        int[] answer = {};
-        a = grid.length;
-        b = grid[0].length;
-        boolMarum = false;
-        size = 1;
-        cnt = a*b;
-        for(int i = 0; i < a; i++){
-            for(int j = 0; j < b; j++){
-                bfs(i,j);
+    static boolean[][] dist;
+    static int N, M;
+    static int[] target;
+    static ArrayList<Integer>[] A;
+    public static void main(String[] args) throws IOException {
+        input();
+        pro();
+    }
+    static void pro() {
+        //연결 확인하려고 각 노드에서 출발하여 bfs를 돌림
+        for (int i = 1; i <= N; i++) bfs(i);
+//        for (int i = 1; i <= N; i++) {
+//            for (Integer integer : A[i]) {
+//                System.out.print(integer + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        for (int i = 1; i <= N; i++) {
+//            for (int j = 1; j <= N; j++) {
+//                System.out.print(dist[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+        int cnt = 0;
+        for (int i = 1; i <= M - 1; i++) {
+            if(dist[target[i]][target[i+1]]) {
+                cnt++;
             }
         }
-        System.out.println("["+ size + "," + cnt + "]");
+        if(cnt == M - 1) System.out.println("YES");
+        else System.out.println("NO");
     }
-
-    public static void bfs(int x,int y){
-        int[][] visited = new int[a][b];
-
-        // 현재 찾는 숫자
-        int number = grid[x][y];
-
-        // 그 숫자로 비지티드를 채워서 마름모체크 함수로 넘길거임
-        visited[x][y] = number;
-
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[] {x,y});
-
-        while(!q.isEmpty()){
-            int[] cur = q.poll();
-            
-            for(int num = 0; num < 4; num++){
-                int newX = cur[0] + dirX[num];
-                int newY = cur[1] + dirY[num];
-                // 맵 안에 있는지 체크, 방문안했는지 체크
-                if(0 <= newX && newX < a && 0 <= newY && newY < b && visited[newX][newY] == 0){
-                    // 같은 숫자인지 체크
-                    if(grid[newX][newY] == number){
-                        visited[newX][newY] = number;
-                        q.offer(new int[] {newX,newY});
-                    }
+    static void bfs(int start) {
+        Queue<Integer> q = new ArrayDeque<>();
+        q.offer(start);
+        while (!q.isEmpty()) {
+            int cur = q.poll();
+            for (int next : A[cur]) {
+                if(dist[start][next]) continue;
+                q.offer(next);
+                dist[start][next] = true;
+            }
+        }
+    }
+    static void input() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = null;
+        N = atoi(br.readLine());
+        M = atoi(br.readLine());
+        target = new int[M + 1];
+        A = new ArrayList[N + 1];
+        dist = new boolean[N + 1][N + 1];
+        for (int i = 0; i <= N; i++) A[i] = new ArrayList<>();
+        for (int i = 1; i <= N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int k = 1; k <= i; k++) st.nextToken();
+            for (int j = i+1; j <= N; j++) {
+                int num = atoi(st.nextToken());
+                if(num == 1){
+                    A[i].add(j);
+                    A[j].add(i);
                 }
             }
         }
-        check(visited,number);
-    }
-
-    public static void check(int[][] visited, int number){
-        // 마름모 최대 크기
-        int maxNum = Math.min(a,b);
-        int[][][] marum = {{{0,1},{1,0},{1,-1}},{{0,-1},{1,0},{1,1}},{{-1,0},{0,1},{1,1}},{{-1,0},{0,-1},{1,-1}}};
-        while(maxNum >= size){
-            end :for(int ci = 0; ci < a; ci++){
-                for(int cj = 0; cj < b; cj++){
-                    // 0이 아니라면
-                    if(visited[ci][cj] != 0){
-                        //4방향 마름모 확인
-                        for(int[][] v1 : marum){
-                            Boolean bool = true;
-                            // 각 비교
-                            for(int[] v2: v1){
-                                int checkNum = maxNum -1;
-                                while(checkNum > 1){
-                                    int newCi = ci+ v2[0]*checkNum;
-                                    int newCj = cj + v2[1]*checkNum;
-                                    if(0 <= newCi && newCi < a && 0 <= newCj && newCj < b && visited[newCi][newCj] == number){
-                                        continue;
-                                    }else bool = false;
-                                }
-                                    
-                            }
-                            // 마름모가 맞으면
-                            if(bool){
-                                if(maxNum > size){
-                                    size = maxNum;
-                                    cnt = 1;
-                                }else cnt++;
-                                break end;
-                            }
-                        }
-
-                    }
-                }
-            }
-            maxNum--;
+        st = new StringTokenizer(br.readLine());
+        for (int i = 1; i <= M; i++) {
+            target[i] = atoi(st.nextToken());
         }
     }
 }

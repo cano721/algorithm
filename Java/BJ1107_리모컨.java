@@ -1,7 +1,9 @@
 /**
  * 구현문제
  * 
- * 
+ * 1. 원래 채널과 갈려는 채널이 같다면 0 출력
+ * 2. +,- 버튼만 눌러서 갔을때 몇번 눌러야하는지 체크
+ * 3. 클릭 가능한 숫자 버튼으로 만든 번호에서 +,-버튼을 몇번 눌러야하는지 체크
  */
 
 import java.util.*;
@@ -32,7 +34,7 @@ public class BJ1107_리모컨 {
             System.out.println(0);
         }else{
             // 위아래 증가로만 만들었을때
-            click("100");
+            click("100",0);
             // 숫자버튼을 클릭하여 만들어서 비교했을때
             find("");
             System.out.println(answer);
@@ -42,13 +44,13 @@ public class BJ1107_리모컨 {
     public static void find(String check){
         // 한칸 클때 체크(종료문)
         if(check.length() == n.length()+1){
-            click(check);
+            click(check,check.length());
             return;
         }
 
         // 한칸 작거나 같을때 체크
         if(check.length() == n.length()-1 || check.length() == n.length()){
-            click(check);
+            click(check,check.length());
         }
 
         for(int i = 0; i < 10; i++){
@@ -60,12 +62,12 @@ public class BJ1107_리모컨 {
         
     }
 
-    public static void click(String check){
+    public static void click(String check, int checkLength){
         if(check.equals("")) return;
         int channel = Integer.parseInt(n);
         int checkNum = Integer.parseInt(check);
 
         int clickNum = Math.abs(channel - checkNum);
-        answer = Math.min(answer, clickNum + check.length());
+        answer = Math.min(answer, clickNum + checkLength);
     }
 }
