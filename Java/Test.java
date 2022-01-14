@@ -1,79 +1,50 @@
-import java.util.*;
-import java.io.*;
-
 public class Test {
+    public static void main(String[] args) {
+        
+        int full = (1<<5)-1;
+        System.out.println("꽉찬 집합: " + Integer.toBinaryString(full));
+        int mfull = -1;
+        System.out.println("인트(32비트) 꽉 찬 집합: " + Integer.toBinaryString(mfull));
+        
+        int a = 32;
+        a |= (1<<3);
+        System.out.println("4번째 원소 추가: " + Integer.toBinaryString(a));
+    
+        System.out.println("4번째 원소 반환: " + Integer.toBinaryString(a & (1<<3)));
 
-    static int atoi(String str) {
-        return Integer.parseInt(str);
-    }
-    static boolean[][] dist;
-    static int N, M;
-    static int[] target;
-    static ArrayList<Integer>[] A;
-    public static void main(String[] args) throws IOException {
-        input();
-        pro();
-    }
-    static void pro() {
-        //연결 확인하려고 각 노드에서 출발하여 bfs를 돌림
-        for (int i = 1; i <= N; i++) bfs(i);
-//        for (int i = 1; i <= N; i++) {
-//            for (Integer integer : A[i]) {
-//                System.out.print(integer + " ");
-//            }
-//            System.out.println();
-//        }
-//
-//        for (int i = 1; i <= N; i++) {
-//            for (int j = 1; j <= N; j++) {
-//                System.out.print(dist[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-        int cnt = 0;
-        for (int i = 1; i <= M - 1; i++) {
-            if(dist[target[i]][target[i+1]]) {
-                cnt++;
-            }
+        a &= ~(1<<3);
+        System.out.println("4번째 원소 삭제: " + Integer.toBinaryString(a));
+
+        a ^= (1<<3);
+        System.out.println("4번째 원소 토글: " + Integer.toBinaryString(a));
+
+        if((a &(1<<3)) == (1<<3)){
+            System.out.println("4번째 원소 포함여부 확인 완료");
         }
-        if(cnt == M - 1) System.out.println("YES");
-        else System.out.println("NO");
-    }
-    static void bfs(int start) {
-        Queue<Integer> q = new ArrayDeque<>();
-        q.offer(start);
-        while (!q.isEmpty()) {
-            int cur = q.poll();
-            for (int next : A[cur]) {
-                if(dist[start][next]) continue;
-                q.offer(next);
-                dist[start][next] = true;
-            }
-        }
-    }
-    static void input() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = null;
-        N = atoi(br.readLine());
-        M = atoi(br.readLine());
-        target = new int[M + 1];
-        A = new ArrayList[N + 1];
-        dist = new boolean[N + 1][N + 1];
-        for (int i = 0; i <= N; i++) A[i] = new ArrayList<>();
-        for (int i = 1; i <= N; i++) {
-            st = new StringTokenizer(br.readLine());
-            for (int k = 1; k <= i; k++) st.nextToken();
-            for (int j = i+1; j <= N; j++) {
-                int num = atoi(st.nextToken());
-                if(num == 1){
-                    A[i].add(j);
-                    A[j].add(i);
-                }
-            }
-        }
-        st = new StringTokenizer(br.readLine());
-        for (int i = 1; i <= M; i++) {
-            target[i] = atoi(st.nextToken());
-        }
+
+        int x = 38;
+        int y = 33;
+
+        System.out.println("x: " + Integer.toBinaryString(x));
+        System.out.println("y: " + Integer.toBinaryString(y));
+        
+        System.out.println("합집합: " + Integer.toBinaryString(x|y));
+        System.out.println("교집합: " + Integer.toBinaryString(x&y));
+        System.out.println("차집합: " + Integer.toBinaryString(x&-y));
+        System.out.println("둘중에 하나만 포함집합: " + Integer.toBinaryString(x^y));
+
+        System.out.println("x집합 켜진 원소 수: " + Integer.bitCount(x));
+
+        x &= ((1<<3) -1);
+        System.out.println("3번째 원소 왼쪽 0: " + Integer.toBinaryString(x));
+        x = 38;
+        x &= (-1 <<3);
+        System.out.println("3번째 원소 오른쪽 0: " + Integer.toBinaryString(x));
+
+        a = 14; // {4,3,2}
+        System.out.println("a: " + Integer.toBinaryString(a));
+        for (int subA= a ; subA>0; subA = ((subA - 1) & a)){
+            System.out.println("a 부분집합: " +Integer.toBinaryString(subA));
+         }
     }
 }
