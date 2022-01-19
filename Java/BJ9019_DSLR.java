@@ -77,19 +77,11 @@ public class BJ9019_DSLR {
    }
 
    public static int l(int i){
-       String si = String.valueOf(i);
-
-       si = si.substring(1) + si.substring(0, 1);
-
-       return Integer.valueOf(si);
+       return (i%1000)*10 + i/1000;
    }
 
    public static int r(int i){
-       String si = String.valueOf(i);
-
-       si = si.substring(si.length()-1,si.length()) + si.substring(0,si.length()-1);
-
-       return Integer.valueOf(si);
+       return (i%10)*1000 + i/10;
    }
 
    public static class Group{
