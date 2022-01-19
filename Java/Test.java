@@ -1,50 +1,81 @@
+/**
+ * 구간합 구하기 펜윅트리 버전 코드
+ * 
+ * 
+ */
+
+import java.util.*;
+import java.io.*;
+
 public class Test {
-    public static void main(String[] args) {
-        
-        int full = (1<<5)-1;
-        System.out.println("꽉찬 집합: " + Integer.toBinaryString(full));
-        int mfull = -1;
-        System.out.println("인트(32비트) 꽉 찬 집합: " + Integer.toBinaryString(mfull));
-        
-        int a = 32;
-        a |= (1<<3);
-        System.out.println("4번째 원소 추가: " + Integer.toBinaryString(a));
     
-        System.out.println("4번째 원소 반환: " + Integer.toBinaryString(a & (1<<3)));
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
 
-        a &= ~(1<<3);
-        System.out.println("4번째 원소 삭제: " + Integer.toBinaryString(a));
+        st = new StringTokenizer(br.readLine());
 
-        a ^= (1<<3);
-        System.out.println("4번째 원소 토글: " + Integer.toBinaryString(a));
+        int n = Integer.parseInt(st.nextToken()); // 수의 개수
+        int m = Integer.parseInt(st.nextToken()); // 데이터 변경 개수
+        int k = Integer.parseInt(st.nextToken()); // 구간합 구하는 횟수
 
-        if((a &(1<<3)) == (1<<3)){
-            System.out.println("4번째 원소 포함여부 확인 완료");
+        // 수 저장 배열
+        long[] arr = new long[n+1];
+		
+		FenwickTree ftree = new FenwickTree(arr.length);
+        
+		for(int i = 1; i <= n; i++){
+            arr[i] = Long.parseLong(br.readLine());
+			ftree.update(i, arr[i]);
         }
 
-        int x = 38;
-        int y = 33;
-
-        System.out.println("x: " + Integer.toBinaryString(x));
-        System.out.println("y: " + Integer.toBinaryString(y));
         
-        System.out.println("합집합: " + Integer.toBinaryString(x|y));
-        System.out.println("교집합: " + Integer.toBinaryString(x&y));
-        System.out.println("차집합: " + Integer.toBinaryString(x&-y));
-        System.out.println("둘중에 하나만 포함집합: " + Integer.toBinaryString(x^y));
+        for(int i = 0; i < m+k; i++){
+            st = new StringTokenizer(br.readLine());
 
-        System.out.println("x집합 켜진 원소 수: " + Integer.bitCount(x));
+            // 명령어
+            int cmd = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(st.nextToken());
+            long b = Long.parseLong(st.nextToken());
 
-        x &= ((1<<3) -1);
-        System.out.println("3번째 원소 왼쪽 0: " + Integer.toBinaryString(x));
-        x = 38;
-        x &= (-1 <<3);
-        System.out.println("3번째 원소 오른쪽 0: " + Integer.toBinaryString(x));
+            // 데이터 변경 명령어
+            if(cmd == 1){
+                ftree.update(a,b-arr[a]);
+                arr[a] = b;
+            // 구간합 명령어
+            }else{
+                bw.write(ftree.sum((int)b) -ftree.sum(a-1) +"\n");
+            }
+        }
 
-        a = 14; // {4,3,2}
-        System.out.println("a: " + Integer.toBinaryString(a));
-        for (int subA= a ; subA>0; subA = ((subA - 1) & a)){
-            System.out.println("a 부분집합: " +Integer.toBinaryString(subA));
-         }
+        bw.flush();
+        bw.close();
+    }
+
+    static class FenwickTree{
+        long tree[];
+        int treeSize;
+
+        public FenwickTree(int arrSize){
+            tree = new long[arrSize+1];
+        }
+
+        public void update(int idx, long diff){
+            while(idx < tree.length){
+				tree[idx] += diff;
+				idx += (idx & -idx);
+			}
+        }
+
+        public long sum(int idx){
+            long result = 0;
+			while(idx > 0){
+				result += tree[idx];
+				idx -= (idx & -idx);
+			}
+
+			return result;
+        }
     }
 }
