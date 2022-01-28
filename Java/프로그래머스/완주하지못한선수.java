@@ -19,7 +19,6 @@ class Solution {
         for(String v: participant){
             map.put(v,map.getOrDefault(v,0)+1);
         }
-        
         for(String v: completion){
             if(map.get(v) > 1){
                 map.put(v,map.get(v)-1);

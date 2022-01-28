@@ -1,81 +1,50 @@
-/**
- * 구간합 구하기 펜윅트리 버전 코드
- * 
- * 
- */
-
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 
 public class Test {
-    
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
 
-        st = new StringTokenizer(br.readLine());
-
-        int n = Integer.parseInt(st.nextToken()); // 수의 개수
-        int m = Integer.parseInt(st.nextToken()); // 데이터 변경 개수
-        int k = Integer.parseInt(st.nextToken()); // 구간합 구하는 횟수
-
-        // 수 저장 배열
-        long[] arr = new long[n+1];
-		
-		FenwickTree ftree = new FenwickTree(arr.length);
+    public static boolean[] prime; // 소수판별 저장 배열
+    public static void main(String[] args) {
         
-		for(int i = 1; i <= n; i++){
-            arr[i] = Long.parseLong(br.readLine());
-			ftree.update(i, arr[i]);
-        }
+        Scanner sc = new Scanner(System.in);
 
-        
-        for(int i = 0; i < m+k; i++){
-            st = new StringTokenizer(br.readLine());
+        int num = sc.nextInt();
 
-            // 명령어
-            int cmd = Integer.parseInt(st.nextToken());
-            int a = Integer.parseInt(st.nextToken());
-            long b = Long.parseLong(st.nextToken());
-
-            // 데이터 변경 명령어
-            if(cmd == 1){
-                ftree.update(a,b-arr[a]);
-                arr[a] = b;
-            // 구간합 명령어
+        solve(num);
+        // 해당 숫자이하에 모든 소수를 구할때
+        for(int i = 0; i <= num; i++){
+            if(prime[i] == false){
+                System.out.printf("%d는 소수\n",i);
             }else{
-                bw.write(ftree.sum((int)b) -ftree.sum(a-1) +"\n");
+                System.out.printf("%d는 소수아님\n",i);
             }
         }
-
-        bw.flush();
-        bw.close();
     }
 
-    static class FenwickTree{
-        long tree[];
-        int treeSize;
+    public static void solve(int num){
+        // 0~num까지 true면 소수가 아님
+        prime = new boolean[num+1];
+        
+        // 0 또는 1은 소수가 아님
+        if(num < 2) return;
+        
+        // 0과 1은 소수가 아님
+        prime[0] = prime[1] = true;
 
-        public FenwickTree(int arrSize){
-            tree = new long[arrSize+1];
-        }
 
-        public void update(int idx, long diff){
-            while(idx < tree.length){
-				tree[idx] += diff;
-				idx += (idx & -idx);
-			}
-        }
+        // 그외의 수(루트이하의 수로 나눠보기)
+        for(int i = 2; i <= Math.sqrt(num); i++){
 
-        public long sum(int idx){
-            long result = 0;
-			while(idx > 0){
-				result += tree[idx];
-				idx -= (idx & -idx);
-			}
+            // 이미 확인된거면 패스
+            if(prime[i] == true){
+                continue;
+            }
 
-			return result;
+            // 배수부터 시작하여 다음배수만큼 증가
+            for(int j = i*i; j < prime.length; j = j+i){
+                // 소수아닌걸로 처리
+                prime[j] = true;
+            }
+            
         }
     }
 }
