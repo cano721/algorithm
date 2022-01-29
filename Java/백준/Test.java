@@ -1,50 +1,42 @@
-import java.util.Scanner;
-
-public class Test {
-
-    public static boolean[] prime; // 소수판별 저장 배열
+import java.util.*;
+class Test {
     public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-
-        int num = sc.nextInt();
-
-        solve(num);
-        // 해당 숫자이하에 모든 소수를 구할때
-        for(int i = 0; i <= num; i++){
-            if(prime[i] == false){
-                System.out.printf("%d는 소수\n",i);
-            }else{
-                System.out.printf("%d는 소수아님\n",i);
-            }
-        }
+        int[][] board = {{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5}};
+        // int[][] skill = {{1,0,0,3,4,4}};
+        int[][] skill = {{1,0,0,3,4,4},{1,2,0,2,3,2},{2,1,0,3,1,2},{1,0,1,3,3,1}};
+        solution(board, skill);
     }
-
-    public static void solve(int num){
-        // 0~num까지 true면 소수가 아님
-        prime = new boolean[num+1];
+    public static int solution(int[][] board, int[][] skill) {
+        int answer = 0;
+        int n = board.length;
+        int m = board[0].length;
+        int [][] prefix_arr = new int[n+1][m+1];
         
-        // 0 또는 1은 소수가 아님
-        if(num < 2) return;
-        
-        // 0과 1은 소수가 아님
-        prime[0] = prime[1] = true;
-
-
-        // 그외의 수(루트이하의 수로 나눠보기)
-        for(int i = 2; i <= Math.sqrt(num); i++){
-
-            // 이미 확인된거면 패스
-            if(prime[i] == true){
-                continue;
-            }
-
-            // 배수부터 시작하여 다음배수만큼 증가
-            for(int j = i*i; j < prime.length; j = j+i){
-                // 소수아닌걸로 처리
-                prime[j] = true;
-            }
+        for(int [] row : skill)
+        {
+            int type = row[0];
+            int degree = type == 1 ? -row[5] : row[5];
+            int r1 = row[1];
+            int c1 = row[2];
+            int r2 = row[3];
+            int c2 = row[4];
             
+            for(int i = r1; i <= r2; ++i)
+            {
+                prefix_arr[i][c1] += degree;
+                prefix_arr[i][c2+1] += -degree;
+            }
         }
+        for(int i = 0; i < n; ++i)
+        {
+            for(int j = 0; j < m; ++j)
+            {
+                if(j != 0) prefix_arr[i][j] += prefix_arr[i][j-1];
+                board[i][j] += prefix_arr[i][j];
+                if(board[i][j] > 0) answer++;
+            }
+        }
+        
+        return answer;
     }
 }
